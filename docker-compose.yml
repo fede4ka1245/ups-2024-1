@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  backend:
+    container_name: back
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./files:/app/files
+    restart: always
